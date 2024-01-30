@@ -43,7 +43,7 @@ console.log(data);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/alumnos/${alumnoId}`);
+        const response = await axios.get(`https://servidor-escolar.onrender.com/alumnos/${alumnoId}`);
         const fetchedData = response.data;
         setData(fetchedData); // Asegúrate de manejar el caso en el que Materia sea undefined o nulo
       } catch (error) {
@@ -59,7 +59,7 @@ console.log(data);
 
     try {
       const response = await axios.put(
-        `http://localhost:3001/alumnos/${data.id}/${materiaId}`,
+        `https://servidor-escolar.onrender.com/alumnos/${data.id}/${materiaId}`,
         info
       );
       const res = response.data;
