@@ -1,17 +1,10 @@
 import * as React from "react";
-import { styled } from "@mui/material/styles";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import styles from "./Alumnos1er.module.css";
+import styles from "./Alumnos2do.module.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ReactDOMServer from "react-dom/server";
@@ -31,12 +24,11 @@ const style = {
   p: 4,
 };
 
-export default function Matematicas() {
+export default function Alumnos2do() {
   const [data, setData] = React.useState([]);
   const [open, setOpen] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
   const [searchTerm, setSearchTerm] = React.useState("");
-  console.log(data);
   const [info, setInfo] = React.useState({
     nombre: "",
     generación: "",
@@ -70,36 +62,42 @@ export default function Matematicas() {
       <table className={styles.boletin_table}>
         <thead>
           <tr>
-            <th>Generación</th>
+          <th>Generación</th>
 
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Estado civíl</th>
-            <th>Trabajo</th>
-            <th>Puesto</th>
-            <th> Ubicación laboral</th>
+<th>Nombre</th>
+<th>Email</th>
+<th>Teléfono</th>
+<th>Estado civíl</th>
+<th>Trabajo</th>
+<th>Puesto</th>
+<th> Ubicación laboral</th>
 
-            <th>Estado</th>
+
+
+<th>Estado</th>
           </tr>
         </thead>
         <tbody>
           {data.map(
             (row) =>
-              row.estado === "activo" &&
-              row.año === "1er" && (
+              row.estado === "activo" && row.año === "2do" ? (
                 <tr key={row.id}>
-                  <td>{row.generación}</td>
-                  <td>{row.nombre}</td>
-                  <td>{row.correo}</td>
-                  <td>{row.telefono}</td>
-                  <td>{row.estado_civil}</td>
-                  <td>{row.trabajo}</td>
-                  <td>{row.puesto}</td>
-                  <td>{row.ubicacion_laboral}</td>
-                  <td>{row.estado}</td>
-                </tr>
-              )
+                <td>{row.generación}</td>
+
+                <td>{row.nombre}</td>
+                <td>{row.correo}</td>
+                <td>{row.telefono}</td>
+                <td>{row.estado_civil}</td>
+                <td>{row.trabajo}</td>
+                <td>{row.puesto}</td>
+                <td>{row.ubicacion_laboral}</td>
+
+
+
+
+                <td>{row.estado}</td>
+              </tr>
+              ): null
           )}
         </tbody>
       </table>
@@ -143,21 +141,22 @@ export default function Matematicas() {
           />
         </div>
         <Box sx={{ display: "flex", gap: "2em" }}>
+        
           <Button variant="contained" onClick={generatePdf} disabled={loading}>
             {loading ? "Generando PDF..." : "Descargar"}
           </Button>
         </Box>
+       
 
         {data.length > 0 ? (
           <div className={styles.boletin_container}>
             <table className={styles.boletin_table}>
               <thead>
                 <tr>
-                  <th>Generación</th>
+                <th>Generación</th>
                   <th>Nombre</th>
                   <th>Email</th>
                   <th>Teléfono</th>
-
                   <th>Estado</th>
                 </tr>
               </thead>
@@ -168,8 +167,9 @@ export default function Matematicas() {
                       row.estado === "activo" &&
                       row.nombre
                         .toLowerCase()
-                        .includes(searchTerm.toLowerCase()) &&
-                      row.año === "1er"
+                        .includes(searchTerm.toLowerCase()) && 
+                        row.año === "2do"
+
                   )
                   .map(
                     (row) =>

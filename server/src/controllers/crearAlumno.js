@@ -6,7 +6,7 @@ module.exports = {
       nombre,
       generación,
       estado_civil,
-      lugar_de_nacimiento,
+      ubicacion_laboral,
       trabajo,
       puesto,
       telefono,
@@ -21,12 +21,13 @@ module.exports = {
         nombre,
         generación,
         estado_civil,
-        lugar_de_nacimiento,
+        ubicacion_laboral,
         trabajo,
         puesto,
         telefono,
         correo,
         estado,
+        año
       });
 
       // Obtener todas las materias

@@ -8,6 +8,11 @@ import DetailsAlumno from './components/DetailsAlumnos/DetailsAlumnos';
 import Test from './components/test';
 import Login from './components/Login/Login';
 import AllAlumnos from './components/AllAlumnos/AllAlumnos';
+import DetailSeguimientos from './components/DetailSeguimientos/DetailSeguimientos';
+import Registrar from './components/Registrar/Registrar';
+import Alumnos2do from './components/Alumnos-2do/Alumnos1er';
+import Alumnos3er from './components/Alumnos-3er/Alumnos3er';
+
 
 function App() {
   return (
@@ -16,14 +21,21 @@ function App() {
 
     <Routes>
 
-
-
+    <Route path="/" element={<Navigate to='/registrar' />} />
+ 
       <Route path="/" element={<Panel />}>
-        <Route index element={<Button1er />} />
         <Route path="alumnos-1er" element={<Alumnos1er />} />
+        <Route path="alumnos-2do" element={<Alumnos2do />} />
+        <Route path="alumnos-3er" element={<Alumnos3er />} />
+
+
         <Route path="alumnos-1er/:alumnoId" element={<DetailsAlumno />} />
         <Route path="materias-1er/:alumnoId/:materiaId" element={<DetailsAlumno />} />
         <Route path="alumnos" element={<AllAlumnos />} />
+        <Route path="alumnos/:alumnoId" element={<DetailsAlumno />} />
+        <Route path="registrar" element={<Registrar />} />
+
+
 
 
 

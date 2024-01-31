@@ -32,3 +32,16 @@
 .postInput {
     display: grid;
 }
+.InputContainer {
+  display: grid;
+  justify-content: center;
+  gap: 2em;
+}
+.postInput {
+  display: grid;
+}
+.GridInputs {
+display: flex;
+gap: 4em;
+
+}

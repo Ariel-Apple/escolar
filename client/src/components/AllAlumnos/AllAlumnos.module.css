@@ -13,6 +13,13 @@
 }
 .boletin_container {
     margin: 20px;
+    overflow: scroll;
+    max-height: 60vh;
+
+  }
+  .boletin_container_pdf{
+    margin: 20px;
+
   }
   
   .boletin_table {
@@ -41,3 +48,8 @@
     text-decoration: none;
     color: black;
   }
+
+  .search{
+    display: flex;
+    justify-content: center;
+   }

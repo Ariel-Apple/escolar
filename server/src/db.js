@@ -8,13 +8,13 @@ const {
 
 /* `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_DATABASE}` */
 /* `postgres://elari_escolar:3Fe9hAiRpaWj7tLvqfQONbNb8yaVGZJA@dpg-cmrp3d0l5elc73ajs4ig-a.oregon-postgres.render.com/dbname_05fb` */
-const sequelize = new Sequelize(`postgres://elari_escolar:3Fe9hAiRpaWj7tLvqfQONbNb8yaVGZJA@dpg-cmrp3d0l5elc73ajs4ig-a.oregon-postgres.render.com/dbname_05fb`, {
+const sequelize = new Sequelize( `postgres://elari_escolar:3Fe9hAiRpaWj7tLvqfQONbNb8yaVGZJA@dpg-cmrp3d0l5elc73ajs4ig-a.oregon-postgres.render.com/dbname_05fb` , {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   host: process.env.DB_HOST,
   port: process.env.DB_PORT, 
   dialect: 'postgres',
- dialectOptions: {
+  dialectOptions: {
     ssl: {
       require: true, // Activar SSL
     },

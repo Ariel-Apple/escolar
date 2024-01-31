@@ -11,46 +11,41 @@ module.exports = (sequelize) => {
     },
     nombre: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     generación: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     estado_civil: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
-    lugar_de_nacimiento: {
+    ubicacion_laboral: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
 
 
     trabajo: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     puesto: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
 
   
 
     telefono: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
 
     correo: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
+    año: {
+      type: DataTypes.STRING,
+    },
+
 
     estado: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
 
   });

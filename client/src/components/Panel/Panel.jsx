@@ -45,7 +45,7 @@ function Panel(props) {
       <Toolbar />
       <Divider />
       <List>
-        <Link to='/'>
+        <Link to='/alumnos-1er' style={{textDecoration: 'none', color: '#000'}}>
       <ListItem  disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -55,6 +55,7 @@ function Panel(props) {
           </ListItem>
         </Link>
       <Divider />
+      <Link to='/alumnos-2do' style={{textDecoration: 'none', color: '#000'}}>
 
           <ListItem  disablePadding>
             <ListItemButton>
@@ -63,8 +64,12 @@ function Panel(props) {
               <ListItemText primary='2do año' />
             </ListItemButton>
           </ListItem>
+        </Link>
+
           <Divider />
-   
+          
+      <Link to='/alumnos-3er' style={{textDecoration: 'none', color: '#000'}}>
+
           <ListItem  disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -72,16 +77,30 @@ function Panel(props) {
               <ListItemText primary='3er año' />
             </ListItemButton>
           </ListItem>
-          <Link to='alumnos'>
+        </Link>
+        <Link to='registrar' style={{textDecoration: 'none', color: '#000'}}>
+
+<ListItem  disablePadding>
+  <ListItemButton>
+    <ListItemIcon>
+    </ListItemIcon>
+    <ListItemText primary='Registrar' />
+  </ListItemButton>
+</ListItem>
+</Link>
+
+          <Link to='alumnos' style={{textDecoration: 'none', color: '#000'}}>
 
           <ListItem  disablePadding>
             <ListItemButton>
               <ListItemIcon>
               </ListItemIcon>
-              <ListItemText primary='Todos los alumnos' />
+              <ListItemText primary='Seguimiento' />
             </ListItemButton>
           </ListItem>
         </Link>
+
+
 
       </List>
     </div>

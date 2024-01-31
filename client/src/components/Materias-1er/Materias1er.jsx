@@ -61,7 +61,7 @@ export default function Materias1er() {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://servidor-escolar.onrender.com/materias");
+        const response = await axios.get("http://localhost:3001/materias");
 
         const data = await response.data;
         setData(data);
@@ -78,7 +78,7 @@ export default function Materias1er() {
 
     try {
       const response = await axios.post(
-        "https://servidor-escolar.onrender.com/crearMaterias",
+        "http://localhost:3001/crearMaterias",
         info
       );
       const data = response.data;
