@@ -56,7 +56,7 @@ export default function Registrar() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/crearAlumno",
+        "https://servidor-escolar.onrender.com/crearAlumno",
         info
       );
       const responseData = response.data;
