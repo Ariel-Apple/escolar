@@ -65,7 +65,7 @@ export default function Registrar() {
         window.location.reload();
       }, 500);
     } catch (error) {
-      console.error("Error al enviar la solicitud:", error);
+      console.error( error);
     }
   };
 
