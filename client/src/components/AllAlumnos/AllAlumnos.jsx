@@ -70,7 +70,7 @@ export default function AllAlumnos() {
           <td>{row.estado_civil}</td>
           <td>{row.trabajo}</td>
           <td>{row.puesto}</td>
-          <td>{row.lugar_de_nacimiento}</td>
+          <td>{row.ubicacion_laboral}</td>
           <td>{row.estado}</td>
         </tr>
         ))}
