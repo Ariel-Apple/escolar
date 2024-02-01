@@ -49,11 +49,8 @@ export default function Registrar() {
 
   });
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await axios.post(
         "https://servidor-escolar.onrender.com/crearAlumno",
@@ -65,7 +62,7 @@ export default function Registrar() {
         window.location.reload();
       }, 500);
     } catch (error) {
-      console.error( error);
+      console.error("Error al enviar la solicitud:", error);
     }
   };
 
